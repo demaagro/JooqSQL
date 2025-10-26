@@ -37,12 +37,12 @@ pip install click tabulate
 
 3. **Save the application**
 
-Save the main code as `sql_cli.py`
+Save the main code as `jooq.py`
 
 4. **Make it executable (Optional - Linux/Mac)**
 
 ```bash
-chmod +x sql_cli.py
+chmod +x jooq.py
 ```
 
 ## Usage
@@ -50,7 +50,7 @@ chmod +x sql_cli.py
 ### Basic Command Structure
 
 ```bash
-python sql_cli.py [COMMAND] [OPTIONS]
+python jooq.py [COMMAND] [OPTIONS]
 ```
 
 ### Available Commands
@@ -59,59 +59,59 @@ python sql_cli.py [COMMAND] [OPTIONS]
 
 **1. Add a new user**
 ```bash
-python sql_cli.py add-user
+python jooq.py add-user
 # Or with options:
-python sql_cli.py add-user --name "John Doe" --email "john@example.com" --age 30
+python jooq.py add-user --name "John Doe" --email "john@example.com" --age 30
 ```
 
 **2. List all users**
 ```bash
-python sql_cli.py list-users
+python jooq.py list-users
 ```
 
 **3. Get a specific user**
 ```bash
-python sql_cli.py get-user 1
+python jooq.py get-user 1
 ```
 
 **4. Update user information**
 ```bash
-python sql_cli.py update-user 1 --name "Jane Doe" --age 31
+python jooq.py update-user 1 --name "Jane Doe" --age 31
 ```
 
 **5. Delete a user**
 ```bash
-python sql_cli.py delete-user 1
+python jooq.py delete-user 1
 ```
 
 **6. Search users with filters**
 ```bash
 # Search users aged 25 or older
-python sql_cli.py search-users --min-age 25
+python jooq.py search-users --min-age 25
 ```
 
 #### Product Management
 
 **1. Add a new product**
 ```bash
-python sql_cli.py add-product
+python jooq.py add-product
 # Or with options:
-python sql_cli.py add-product --name "Laptop" --price 999.99 --stock 50
+python jooq.py add-product --name "Laptop" --price 999.99 --stock 50
 ```
 
 **2. List all products**
 ```bash
-python sql_cli.py list-products
+python jooq.py list-products
 ```
 
 ### Getting Help
 
 ```bash
 # General help
-python sql_cli.py --help
+python jooq.py --help
 
 # Command-specific help
-python sql_cli.py add-user --help
+python jooq.py add-user --help
 ```
 
 ## Code Examples
@@ -218,14 +218,14 @@ CREATE TABLE products (
 
 ```bash
 # Add some users
-$ python sql_cli.py add-user --name "Alice Smith" --email "alice@example.com" --age 28
+$ python jooq.py add-user --name "Alice Smith" --email "alice@example.com" --age 28
 ✓ User created successfully with ID: 1
 
-$ python sql_cli.py add-user --name "Bob Johnson" --email "bob@example.com" --age 35
+$ python jooq.py add-user --name "Bob Johnson" --email "bob@example.com" --age 35
 ✓ User created successfully with ID: 2
 
 # List all users
-$ python sql_cli.py list-users
+$ python jooq.py list-users
 +------+--------------+-------------------+-------+
 |   ID | Name         | Email             |   Age |
 +======+==============+===================+=======+
@@ -235,7 +235,7 @@ $ python sql_cli.py list-users
 +------+--------------+-------------------+-------+
 
 # Search users
-$ python sql_cli.py search-users --min-age 30
+$ python jooq.py search-users --min-age 30
 Users with age >= 30:
 +------+--------------+-----------------+-------+
 |   ID | Name         | Email           |   Age |
@@ -244,14 +244,14 @@ Users with age >= 30:
 +------+--------------+-----------------+-------+
 
 # Update user
-$ python sql_cli.py update-user 1 --age 29
+$ python jooq.py update-user 1 --age 29
 ✓ User 1 updated successfully!
 
 # Add products
-$ python sql_cli.py add-product --name "Laptop" --price 1299.99 --stock 15
+$ python jooq.py add-product --name "Laptop" --price 1299.99 --stock 15
 ✓ Product created successfully with ID: 1
 
-$ python sql_cli.py list-products
+$ python jooq.py list-products
 +------+--------+---------+-------+
 |   ID | Name   |   Price | Stock |
 +======+========+=========+=======+
